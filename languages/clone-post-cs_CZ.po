@@ -1,0 +1,33 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Clone Post 1.0\n"
+"POT-Creation-Date: 2024-06-05 12:00+0000\n"
+"PO-Revision-Date: 2024-06-05 12:00+0000\n"
+"Last-Translator: <spoluprace@fondly.cz>\n"
+"Language-Team: Czech <spoluprace@fondly.cz>\n"
+"Language: cs_CZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;ngettext;_;__\n"
+
+#: classes/ClonePost.php:35
+msgid "Clone"
+msgstr "Klonovat"
+
+#: classes/ClonePost.php:22
+msgid "Clone this post"
+msgstr "Klonovat tento příspěvek"
+
+#: classes/ClonePost.php:33
+msgid "No post to clone has been supplied!"
+msgstr "Nebyl dodán žádný příspěvek ke klonování!"
+
+#: classes/ClonePost.php:39
+msgid "Security check failed!"
+msgstr "Kontrola zabezpečení selhala!"
+
+#: classes/ClonePost.php:46
+msgid "Post creation failed, could not find original post."
+msgstr "Vytvoření příspěvku selhalo, nelze najít původní příspěvek."
