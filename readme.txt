@@ -1,4 +1,4 @@
-### Clone Post
+### Clone Post or Page
 Contributors: fondly.cz
 Tags: clone, post, duplicate
 Requires at least: WordPress 5.0
@@ -7,20 +7,19 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: [https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)
 
-Clone Post is a WordPress plugin that allows you to easily clone posts within your WordPress site. It provides a simple and intuitive interface to duplicate posts, including their content, metadata, and featured images.
+A plugin to easily clone posts and pages with all their metadata and settings.
 
 ## Features
 
-- Clone posts with a single click
-- Preserve post content, metadata, and featured images
-- Choose to clone posts with or without their associated media attachments
+- Clone posts or pages with a single click
+- Preserve post or page content, metadata, and featured image
 - Supports custom post types and taxonomies
 
 ## Installation
 
-1. Download the latest release of the Clone Post plugin from the [releases page](https://github.com/fondly-cz/wp-clone-post/releases).
-2. Upload the plugin files to the `/wp-content/plugins/wp-clone-post` directory of your WordPress installation.
-3. Activate the Clone Post plugin through the 'Plugins' menu in WordPress.
+1. Download the latest release of the Clone Post or Page plugin from the [releases page](https://github.com/fondly-cz/clone-post-or-page/releases).
+2. Upload the plugin files to the `/wp-content/plugins/clone-post-or-page` directory of your WordPress installation.
+3. Activate the Clone Post or Page plugin through the 'Plugins' menu in WordPress.
 
 ## Usage
 
@@ -31,7 +30,7 @@ Clone Post is a WordPress plugin that allows you to easily clone posts within yo
 
 ## Contributing
 
-Contributions are welcome! If you have any ideas, suggestions, or bug reports, please open an issue or submit a pull request on the [GitHub repository](https://github.com/fondly-cz/wp-clone-post).
+Contributions are welcome! If you have any ideas, suggestions, or bug reports, please open an issue or submit a pull request on the [GitHub repository](https://github.com/fondly-cz/clone-post-or-page).
 
 ## License
 

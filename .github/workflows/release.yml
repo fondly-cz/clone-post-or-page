@@ -19,7 +19,7 @@ jobs:
         php-version: '7.4'  # Adjust the PHP version as needed
 
     - name: Zip Plugin
-      run: zip -r wp-clone-post.zip . -x '*.git*'  # Create a ZIP file of the plugin
+      run: zip -r clone-post-or-page.zip . -x '*.git*'  # Create a ZIP file of the plugin
 
     - name: Create Release
       id: create_release
@@ -38,6 +38,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./wp-clone-post.zip
-        asset_name: wp-clone-post.zip
+        asset_path: ./clone-post-or-page.zip
+        asset_name: clone-post-or-page.zip
         asset_content_type: application/zip

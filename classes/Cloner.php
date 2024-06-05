@@ -4,7 +4,7 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 
-class ClonePost
+class Cloner
 {
 
     private static $instance;
@@ -33,7 +33,7 @@ class ClonePost
     public function addCloneLink($actions, $post)
     {
         if (current_user_can('edit_posts') || current_user_can('edit_pages')) {
-            $actions['duplicate'] = '<a href="' . wp_nonce_url('admin.php?action=clone_post&post=' . $post->ID, 'clone_post_' . $post->ID) . '" title="' . esc_attr__('Clone this post', 'clone-post') . '" rel="permalink">' . esc_html__('Clone', 'clone-post') . '</a>';
+            $actions['duplicate'] = '<a href="' . wp_nonce_url('admin.php?action=clone_post&post=' . $post->ID, 'clone_post_' . $post->ID) . ' rel="permalink">' . esc_html__('Clone', 'clone-post-or-page') . '</a>';
         }
         // how to echo a string which will be translated in wordpress?
 
@@ -48,10 +48,8 @@ class ClonePost
         }
 
         $post_id = absint($_GET['post']);
-        $nonce = $_GET['_wpnonce'];
-
-        if (!wp_verify_nonce($nonce, 'clone_post_' . $post_id)) {
-            wp_die('Security check failed!');
+        if (!isset($_GET['_wpnonce']) || !wp_verify_nonce($_GET['_wpnonce'], 'clone_post_' . $post_id)) {
+            wp_die('Nonce verification failed.');
         }
 
         $post = get_post($post_id);
