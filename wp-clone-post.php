@@ -3,6 +3,7 @@
 Plugin Name: Clone Post
 Description: A plugin to duplicate posts.
 Author: fondly.cz
+Author URI: https://www.fondly.cz
 Version: 1.0
 */
 
