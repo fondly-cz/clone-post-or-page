@@ -26,12 +26,13 @@ class ClonePost
     public function initialize()
     {
         add_action('post_row_actions', [$this, 'addCloneLink'], 10, 2);
+        add_filter('page_row_actions', array($this, 'addCloneLink'), 10, 2);
         add_action('admin_action_clone_post', [$this, 'handleClonePost']);
     }
 
     public function addCloneLink($actions, $post)
     {
-        if (current_user_can('edit_posts')) {
+        if (current_user_can('edit_posts') || current_user_can('edit_pages')) {
             $actions['duplicate'] = '<a href="' . wp_nonce_url('admin.php?action=clone_post&post=' . $post->ID, 'clone_post_' . $post->ID) . '" title="' . esc_attr__('Clone this post', 'clone-post') . '" rel="permalink">' . esc_html__('Clone', 'clone-post') . '</a>';
         }
         // how to echo a string which will be translated in wordpress?
