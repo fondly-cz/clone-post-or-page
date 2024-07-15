@@ -14,9 +14,9 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Set up Node.js (required for softprops/action-gh-release)
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
-        node-version: '16'
+        node-version: '20'
 
     - name: Zip Plugin
       run: zip -r clone-post-or-page.zip . -x '*.git*'  # Create a ZIP file of the plugin
