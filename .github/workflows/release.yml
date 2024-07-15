@@ -21,12 +21,9 @@ jobs:
     - name: Zip Plugin
       run: zip -r clone-post-or-page.zip . -x '*.git*'  # Create a ZIP file of the plugin
 
-    - name: Set up GitHub CLI
-      uses: actions/setup-gh-cli@v1
-
     - name: Create release
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         gh release create ${{ github.ref }} \
           --title "Release ${{ github.ref }}" \
@@ -35,7 +32,7 @@ jobs:
 
     - name: Upload Release Assets
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         gh release upload ${{ github.ref }} clone-post-or-page.zip --clobber
       
