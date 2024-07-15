@@ -21,6 +21,7 @@ jobs:
     - name: Zip Plugin
       run: zip -r clone-post-or-page.zip . -x '*.git*'  # Create a ZIP file of the plugin
 
+
     - name: Create release
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
