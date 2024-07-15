@@ -1,8 +1,8 @@
 ### Clone Post or Page
 Contributors: fondly.cz
 Tags: clone, post, duplicate
-Requires at least: WordPress 6.0
-Tested up to: WordPress 6.5.5
+Requires at least: 6.0
+Tested up to: 6.5.5
 Stable tag: 1.0.0
 License: GPLv3
 License URI: [https://www.gnu.org/licenses/gpl-3.0.txt](https://www.gnu.org/licenses/gpl-3.0.txt)
