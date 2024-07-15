@@ -1,11 +1,11 @@
 ### Clone Post or Page
 Contributors: fondly.cz
 Tags: clone, post, duplicate
-Requires at least: WordPress 5.0
-Tested up to: WordPress 5.8
+Requires at least: WordPress 6.0
+Tested up to: WordPress 6.5.5
 Stable tag: 1.0.0
-License: GPLv2 or later
-License URI: [https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)
+License: GPLv3
+License URI: [https://www.gnu.org/licenses/gpl-3.0.txt](https://www.gnu.org/licenses/gpl-3.0.txt)
 
 A plugin to easily clone posts and pages with all their metadata and settings.
 

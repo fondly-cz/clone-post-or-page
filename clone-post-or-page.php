@@ -2,9 +2,12 @@
 /*
 Plugin Name: Clone Post or Page
 Description: A plugin to duplicate posts or pages.
+Version: 1.0.0
 Author: fondly.cz
 Author URI: https://www.fondly.cz
-Version: 1.0.0
+License: GPLv3
+License URI: https://www.gnu.org/licenses/gpl-3.0.txt
+Text Domain: clone-post-or-page
 */
 
 if (!defined('ABSPATH')) {
