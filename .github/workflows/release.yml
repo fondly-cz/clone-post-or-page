@@ -22,14 +22,14 @@ jobs:
       run: zip -r clone-post-or-page.zip . -x '*.git*'  # Create a ZIP file of the plugin
 
     - name: Create release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{ github.ref_name }}
-        run: |
-          gh release create "$tag" \
-              --repo="$GITHUB_REPOSITORY" \
-              --title="${GITHUB_REPOSITORY#*/} ${tag#v}" \
-              --generate-notes
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        tag: ${{ github.ref_name }}
+      run: |
+        gh release create "$tag" \
+          --repo="$GITHUB_REPOSITORY" \
+          --title="${GITHUB_REPOSITORY#*/} ${tag#v}" \
+          --generate-notes
 
     - name: Upload Release Asset
       uses: actions/upload-release-asset@v1
