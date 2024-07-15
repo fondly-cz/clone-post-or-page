@@ -13,27 +13,19 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Set up PHP
-      uses: shivammathur/setup-php@v2
+    - name: Set up Node.js (required for softprops/action-gh-release)
+      uses: actions/setup-node@v3
       with:
-        php-version: '7.4'  # Adjust the PHP version as needed
+        node-version: '16'
 
     - name: Zip Plugin
       run: zip -r clone-post-or-page.zip . -x '*.git*'  # Create a ZIP file of the plugin
 
-
-    - name: Create release
+    - name: Create GitHub Release
+      id: create_release
+      uses: softprops/action-gh-release@v2
+      with:
+        files: clone-post-or-page.zip
       env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        gh release create ${{ github.ref }} \
-          --title "Release ${{ github.ref }}" \
-          --target ${{ github.sha }}
-          --generate-notes
-
-    - name: Upload Release Assets
-      env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        gh release upload ${{ github.ref }} clone-post-or-page.zip --clobber
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
